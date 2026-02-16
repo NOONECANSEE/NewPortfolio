@@ -35,3 +35,54 @@ body {
 .animate-gradient {
   animation: gradientMove 6s linear infinite;
 }
+
+
+/* ================= SCROLLBAR ================= */
+
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #6366f1,
+    #06b6d4
+  );
+  border-radius: 10px;
+  border: 2px solid #020617;
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #818cf8,
+    #22d3ee
+  );
+}
+
+/* ================= FIREFOX ================= */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 #020617;
+}
+
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 8s ease infinite;
+}

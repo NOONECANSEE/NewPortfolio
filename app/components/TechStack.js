@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 import {
   SiReact,
@@ -20,16 +19,6 @@ import { FaAws, FaServer } from "react-icons/fa";
 import { RiDatabase2Line } from "react-icons/ri";
 
 export default function TechStackPage() {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-
-  /* Cursor Glow */
-  useEffect(() => {
-    const move = (e) => {
-      setPos({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
-  }, []);
 
   /* Tech Categories */
   const stacks = [
@@ -102,9 +91,22 @@ export default function TechStackPage() {
   ];
 
   return (
-    <main className="bg-[#020617] text-white min-h-screen overflow-hidden">
-      {/* PAGE HEADER */}
-      <section className="pt-40 pb-24 px-6 text-center relative">
+    <main className="bg-[#020617] text-white min-h-screen overflow-hidden relative">
+
+      {/* ===== TOP GRADIENT DIVIDER (Same as other pages) ===== */}
+      <div
+        className="
+          absolute top-0 left-0 w-full h-px
+          bg-gradient-to-r
+          from-transparent
+          via-indigo-500
+          to-transparent
+          opacity-40
+        "
+      />
+
+      {/* ===== PAGE HEADER ===== */}
+      <section className="pt-40 pb-24 px-6 text-center relative z-10">
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -122,13 +124,9 @@ export default function TechStackPage() {
         <div className="h-px w-40 mx-auto mt-10 bg-gradient-to-r from-transparent via-indigo-400/40 to-transparent" />
       </section>
 
-      {/* STACK GRID */}
-      <section className="max-w-7xl mx-auto px-6 pb-32 relative">
-        {/* Glow Orbs */}
-        <div className="absolute top-0 left-1/4 w-72 h-72 bg-indigo-500/10 blur-[140px] rounded-full" />
-        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-cyan-400/10 blur-[140px] rounded-full" />
-
-        <div className="grid md:grid-cols-3 gap-10 relative z-10">
+      {/* ===== STACK GRID ===== */}
+      <section className="max-w-7xl mx-auto px-6 pb-32 relative z-10">
+        <div className="grid md:grid-cols-3 gap-10">
           {stacks.map((stack, i) => (
             <motion.div
               key={i}
@@ -146,9 +144,13 @@ export default function TechStackPage() {
               "
             >
               {/* Title */}
-              <h3 className="text-lg font-semibold mb-2">{stack.title}</h3>
+              <h3 className="text-lg font-semibold mb-2">
+                {stack.title}
+              </h3>
 
-              <p className="text-gray-400 text-sm mb-6">{stack.desc}</p>
+              <p className="text-gray-400 text-sm mb-6">
+                {stack.desc}
+              </p>
 
               {/* Tech Items */}
               <ul className="space-y-4">
@@ -175,7 +177,6 @@ export default function TechStackPage() {
         </div>
       </section>
 
-    
     </main>
   );
 }

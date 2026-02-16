@@ -14,17 +14,6 @@ import { useEffect, useState } from "react";
 export default function ServicesPage() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
-  /* Cursor Glow */
-  useEffect(() => {
-    const move = (e) => {
-      requestAnimationFrame(() => {
-        setPos({ x: e.clientX, y: e.clientY });
-      });
-    };
-
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
-  }, []);
 
   /* ---------------- SERVICES ---------------- */
 
@@ -115,18 +104,21 @@ export default function ServicesPage() {
   ];
 
   return (
-    <main className="bg-[#020617] text-white min-h-screen overflow-hidden">
+<main className="bg-[#020617] text-white min-h-screen overflow-hidden relative">
 
-      {/* Cursor Glow */}
-      <div
-        className="
-          fixed pointer-events-none z-0
-          w-40 h-40
-          bg-gradient-to-r from-indigo-500/10 to-cyan-400/10
-          blur-[100px] rounded-full
-        "
-        style={{ left: pos.x - 80, top: pos.y - 80 }}
-      />
+
+     {/* ===== TOP GRADIENT DIVIDER ===== */}
+<div
+  className="
+    absolute top-0 left-0 w-full h-px
+    bg-gradient-to-r
+    from-transparent
+    via-indigo-500
+    to-transparent
+    opacity-40
+  "
+/>
+
 
       {/* ---------------- HEADER ---------------- */}
 

@@ -1,31 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import Tilt from "react-parallax-tilt";
 
 export default function ExperiencePage() {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-
-  /* Cursor Glow */
-  useEffect(() => {
-    const move = (e) => {
-      setPos({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
-  }, []);
-
   return (
     <main className="bg-[#020617] text-white min-h-screen relative overflow-hidden">
-      {/* CURSOR GLOW */}
+
+      {/* ===== TOP GRADIENT DIVIDER (Same as About/Footer) ===== */}
       <div
-        className="fixed w-96 h-96 bg-indigo-500/10 blur-[140px] rounded-full pointer-events-none"
-        style={{ left: pos.x - 200, top: pos.y - 200 }}
+        className="
+          absolute top-0 left-0 w-full h-px
+          bg-gradient-to-r
+          from-transparent
+          via-indigo-500
+          to-transparent
+          opacity-40
+        "
       />
 
-      {/* TITLE */}
-      <section className="pt-40 pb-24 text-center px-6">
+      {/* ===== TITLE ===== */}
+      <section className="pt-40 pb-24 text-center px-6 relative z-10">
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,13 +32,15 @@ export default function ExperiencePage() {
         <div className="h-px w-40 mx-auto mt-6 bg-gradient-to-r from-transparent via-indigo-400/40 to-transparent" />
       </section>
 
-      {/* TIMELINE WRAPPER */}
+      {/* ===== TIMELINE WRAPPER ===== */}
       <section className="max-w-6xl mx-auto px-6 pb-32 relative">
+
         {/* Timeline Line */}
         <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-indigo-400/30 to-transparent" />
 
         {/* EXPERIENCE NODE */}
         <div className="relative md:ml-0 ml-12">
+
           {/* Timeline Dot */}
           <div className="absolute -left-9 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-indigo-400 rounded-full shadow-lg shadow-indigo-500/40" />
 
@@ -76,13 +73,13 @@ export default function ExperiencePage() {
                 {/* ROLE BADGE */}
                 <span
                   className="
-                  mt-4 md:mt-0
-                  px-4 py-2 text-sm
-                  bg-indigo-500/10
-                  border border-indigo-400/30
-                  rounded-full text-indigo-400
-                  w-fit
-                "
+                    mt-4 md:mt-0
+                    px-4 py-2 text-sm
+                    bg-indigo-500/10
+                    border border-indigo-400/30
+                    rounded-full text-indigo-400
+                    w-fit
+                  "
                 >
                   Product Engineering
                 </span>
@@ -135,12 +132,10 @@ export default function ExperiencePage() {
 
               {/* RESPONSIBILITIES */}
               <div className="mt-16">
-                {/* Heading */}
                 <h3 className="text-lg font-semibold mb-10 tracking-wide text-white">
                   Key Responsibilities & Ownership
                 </h3>
 
-                {/* Responsibilities Grid */}
                 <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
                   {[
                     "Architected scalable multi-tenant SaaS platforms powering real business operations",
@@ -159,26 +154,24 @@ export default function ExperiencePage() {
                       whileHover={{ x: 6 }}
                       className="group flex items-start gap-4"
                     >
-                      {/* Bullet */}
                       <div
                         className="
-          mt-1.5
-          w-2 h-2
-          rounded-full
-          bg-indigo-400
-          group-hover:scale-125
-          transition
-        "
+                          mt-1.5
+                          w-2 h-2
+                          rounded-full
+                          bg-indigo-400
+                          group-hover:scale-125
+                          transition
+                        "
                       />
 
-                      {/* Text */}
                       <p
                         className="
-          text-gray-400
-          leading-relaxed
-          group-hover:text-gray-200
-          transition
-        "
+                          text-gray-400
+                          leading-relaxed
+                          group-hover:text-gray-200
+                          transition
+                        "
                       >
                         {point}
                       </p>

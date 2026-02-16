@@ -1,6 +1,3 @@
-
-
-
 "use client";
 
 import Navbar from "./components/Navbar";
@@ -13,20 +10,23 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import SmoothScroll from "./components/SmoothScroll";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-b from-black via-gray-950 to-black text-white">
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <TechStack />
-      <Projects />
-      <Services />
-      {/* <Contact /> */}
-      {/* <CTA /> */}
-      {/* <Footer /> */}
-    </div>
+    <SmoothScroll>
+      <div className="bg-gradient-to-b from-black via-gray-950 to-black text-white">
+        <Navbar />
+        <Hero />
+        <About />
+        <Experience />
+        <TechStack />
+        <Projects />
+        <Services />
+        <Contact />
+        <CTA />
+        <Footer />
+      </div>
+    </SmoothScroll>
   );
 }
