@@ -17,7 +17,7 @@ export default function Navbar() {
     ["rgba(2,6,23,0.4)", "rgba(2,6,23,0.8)"]
   );
 
-  const links = ["about", "projects", "tech", "contact"];
+  const links = ["about", "projects", "tech","services", "contact"];
 
   return (
     <>
@@ -103,6 +103,7 @@ export default function Navbar() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               href="/resume.pdf"
+              target="_blank" 
               className="
                 px-4 py-2 rounded-xl
                 bg-white/5 backdrop-blur-xl

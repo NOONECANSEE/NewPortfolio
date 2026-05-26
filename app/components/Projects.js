@@ -172,7 +172,7 @@ const projects = [
 ];
 
   return (
-    <main className="bg-[#020617] text-white min-h-screen overflow-hidden relative">
+    <main className="bg-[#020617] text-white min-h-screen overflow-hidden relative" id="projects">
       {/* ===== TOP GRADIENT DIVIDER ===== */}
 <div
   className="

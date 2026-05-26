@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 
 export default function ExperiencePage() {
   return (
-    <main className="bg-[#020617] text-white min-h-screen relative overflow-hidden">
+    <main className="bg-[#020617] text-white min-h-screen relative overflow-hidden" id="experience">
 
       {/* ===== TOP GRADIENT DIVIDER (Same as About/Footer) ===== */}
       <div

@@ -30,7 +30,7 @@ export default function PremiumContactPage() {
   };
 
   return (
-    <main className="relative bg-[#020617] text-white min-h-screen overflow-hidden">
+    <main className="relative bg-[#020617] text-white min-h-screen overflow-hidden" id="contact">
 
       {/* ===== Cursor Spotlight ===== */}
       <div

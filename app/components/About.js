@@ -10,7 +10,7 @@ export default function AboutPage() {
 
 
   return (
-    <main className="bg-[#020617] text-white min-h-screen overflow-hidden relative">
+    <main className="bg-[#020617] text-white min-h-screen overflow-hidden relative" id="about">
 
       {/* ===== TOP GRADIENT DIVIDER (Like Footer) ===== */}
       <div
@@ -106,7 +106,7 @@ export default function AboutPage() {
       </section>
 
       {/* ===== SUBSCRIPTION FLOW ===== */}
-      <section className="max-w-6xl mx-auto px-6 pb-28">
+      {/* <section className="max-w-6xl mx-auto px-6 pb-28">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">
           Subscription & Payment Flow
         </h2>
@@ -138,10 +138,10 @@ export default function AboutPage() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ===== RBAC SECTION ===== */}
-      <section className="max-w-6xl mx-auto px-6 pb-28">
+      {/* <section className="max-w-6xl mx-auto px-6 pb-28">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">
           RBAC Architecture
         </h2>
@@ -174,7 +174,7 @@ export default function AboutPage() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
    
 

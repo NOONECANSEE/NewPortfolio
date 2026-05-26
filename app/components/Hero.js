@@ -165,6 +165,7 @@ export default function Hero() {
 
         <a
           href="/resume.pdf"
+          target="_blank"
           className="
             px-8 py-3 rounded-2xl
             border border-white/20

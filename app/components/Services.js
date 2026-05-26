@@ -104,7 +104,7 @@ export default function ServicesPage() {
   ];
 
   return (
-<main className="bg-[#020617] text-white min-h-screen overflow-hidden relative">
+<main className="bg-[#020617] text-white min-h-screen overflow-hidden relative" id="services">
 
 
      {/* ===== TOP GRADIENT DIVIDER ===== */}

@@ -91,7 +91,7 @@ export default function TechStackPage() {
   ];
 
   return (
-    <main className="bg-[#020617] text-white min-h-screen overflow-hidden relative">
+    <main className="bg-[#020617] text-white min-h-screen overflow-hidden relative" id="tech">
 
       {/* ===== TOP GRADIENT DIVIDER (Same as other pages) ===== */}
       <div

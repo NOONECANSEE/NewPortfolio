@@ -18,12 +18,12 @@ export default function Home() {
       <div className="bg-gradient-to-b from-black via-gray-950 to-black text-white">
         <Navbar />
         <Hero />
-        <About />
-        <Experience />
-        <TechStack />
-        <Projects />
-        <Services />
-        <Contact />
+        <About id="about" />
+        <Experience id="experience" />
+        <Projects id="projects" />
+        <TechStack id="tech" />
+        <Services id="services" />
+        <Contact id="contact" />
         <CTA />
         <Footer />
       </div>
